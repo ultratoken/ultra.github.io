@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRA TOKEN</title>
+
+    <link rel="icon" href="assets/ultra.png">
+    <script src="./libs/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="./libs/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="./libs/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/@hiveio/hive-js/dist/hive.min.js"></script>
+    <script src="./libs/axios/dist/axios.min.js"></script>
+    <script src="./libs/sscjs@latest/dist/ssc.min.js"></script>
+    <script src="./libs/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+    <script src="./libs/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>    
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <div class="card bg-dark text-white p-4 shadow-lg rounded">
+            <div class="d-flex align-items-center justify-content-center mb-3">
+                <img id="logo" src="assets/ultra.png" alt="Ultra Token" class="me-3" width="80">
+                <h2 class="fw-bold font-color">ULTRA TOKEN</h2>
+            </div>
+            <div class="row mt-3 mb-2">
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-warning p-3">
+                        <h5>Initial Token Value</h5>
+                        <p id="initTokenValue" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-info p-3">
+                        <h5>Circulating Supply</h5>
+                        <p id="circulatingSupply" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-warning p-3">
+                        <h5>Hive Revenue</h5>
+                        <p id="hiveRevenue" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-info p-3">
+                        <h5>Hive Dollar Revenue</h5>
+                        <p id="hbdRevenue" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-warning p-3">
+                        <h5>Hive Dollar Value In Hive</h5>
+                        <p id="hbdToHive" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-info p-3">
+                        <h5>Total Revenue In Hive</h5>
+                        <p id="totalRevenueInHive" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-warning p-3">
+                        <h5>Initial Project Value</h5>
+                        <p id="initProjectValue" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-info p-3">
+                        <h5>Current Project Value</h5>
+                        <p id="currentProjectValue" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card bg-warning p-3">
+                        <h5>Current Token Value</h5>
+                        <p id="currentTokenValue" class="fs-4">Loading...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3 mb-3">
+                <button type="button" class="btn btn-danger refresh-btn fs-5 refreshInfo">Refresh Info</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Bottom Bar -->
+    <div class="fixed-bottom-bar">
+        <div class="container d-flex justify-content-end">
+            <!-- HIVE Node Dropdown -->
+            <div class="dropdown me-3">
+                <label class="api-label" for="hive-node">Hive API Node:</label>
+                <select id="rpc-nodes-dropdown" class="custom-select">
+                    <!-- RPC Nodes will be populated dynamically using JavaScript -->
+                </select>    
+            </div>
+    
+            <!-- HIVE-ENGINE Node Dropdown -->
+            <div class="dropdown">
+                <label class="api-label" for="engine-node">Engine API Node:</label>
+                <select id="herpc-nodes-dropdown" class="custom-select">
+                    <!-- RPC Nodes will be populated dynamically using JavaScript -->
+                </select>    
+            </div>
+        </div>
+    </div>            
+</body>
+</html>

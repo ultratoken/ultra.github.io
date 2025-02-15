@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+html, body {
+    font-family: 'Segoe UI', 'Ubuntu', 'Helvetica Neue', 'Oxygen', 'Roboto', 'Open Sans', 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    background-color: #141414;
+    color: #ffffff;
+    font-size: 1rem;
+    padding-bottom: 70px; /* Extra padding for bottom bar */
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+}
+
+.font-color {
+    color: #c9c6c6;
+}
+
+.refresh-btn {
+    width: 50%;
+}
+
+/* Gradient background styles */
+.bg-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    color: white;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+    color: white;
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #ff4e4e, #c20202) !important;
+    color: white;
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #aeadae, #555f61) !important;
+    color: white;
+}
+
+/* Gradient for btn-danger */
+.btn-danger {
+    background: linear-gradient(135deg, #0044ff, #0056b3) !important;
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #323dff, #0300a3) !important;
+}
+
+/* Fixed Bottom Bar */
+.fixed-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #222, #444);
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Align dropdowns to the right side in a row */
+.fixed-bottom-bar .container {
+    display: flex;
+    justify-content: flex-end; /* Push to right */
+    align-items: center;
+    gap: 10px; /* Add space between dropdowns */
+}
+
+/* Fancy Select Styles */
+.custom-select {
+    appearance: none;
+    background: linear-gradient(135deg, #444, #222);
+    border: 1px solid #777;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-select:hover {
+    background: linear-gradient(135deg, #555, #333);
+}
+
+.custom-select:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Dropdown Styling Fix */
+.custom-select option {
+    background: #222;
+    color: white;
+    padding: 8px;
+}
+
+.custom-select option:hover, .custom-select option:focus {
+    background: #333;
+    color: #fff;
+}
+
+/* Align labels and dropdowns neatly */
+.fixed-bottom-bar .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+}
+
+/* Style for the API labels */
+.api-label {
+    font-size: 1rem;
+    color: #c9c6c6;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure dropdowns open upwards */
+.custom-select {
+    position: relative;
+}
+
+.custom-select option {
+    background: #222;
+    color: white;
+    padding: 8px;
+}
+
+/* Open the dropdown upwards */
+.custom-select:focus {
+    position: relative;
+}
+
+.custom-select:focus option {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Mobile View: Align labels and dropdowns vertically */
+@media screen and (max-width: 768px) {
+    .fixed-bottom-bar .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to left */
+        gap: 8px;
+    }
+
+    .custom-select {
+        width: 100%; /* Make dropdowns full width */
+    }
+}
