@@ -21,7 +21,7 @@ $(window).bind("load", async function () {
 
     let he_rpc_nodes = [
         "https://api.primersion.com",
-        "https://ha.herpc.dtools.dev", 
+        "https://enginerpc.com", 
         "https://api.hive-engine.com",        
         "https://herpc.actifit.io"
     ];
